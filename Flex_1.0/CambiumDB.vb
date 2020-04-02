@@ -38,7 +38,7 @@ Public Class CambiumDB
 
         ProgressBar1.Value = "70"
         lblfecha.Text = DateTime.Now.ToString("MM/dd/yyyy")
-
+        ' Texto para validar la sincronizacion del github.-.....
         RecorrerDGVcambium()
     End Sub
 
