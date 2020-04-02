@@ -54,6 +54,9 @@ Partial Class CambiumDB
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtoffline = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.txtnorequired = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtpastduecont = New System.Windows.Forms.TextBox()
@@ -63,9 +66,6 @@ Partial Class CambiumDB
         Me.txtpastdue = New System.Windows.Forms.TextBox()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.lblfecha = New System.Windows.Forms.Label()
-        Me.txtoffline = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CambiumBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Flex_DBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -301,6 +301,34 @@ Partial Class CambiumDB
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Statistics"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(281, 127)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(94, 26)
+        Me.TextBox1.TabIndex = 60
+        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtoffline
+        '
+        Me.txtoffline.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtoffline.Location = New System.Drawing.Point(114, 121)
+        Me.txtoffline.Name = "txtoffline"
+        Me.txtoffline.Size = New System.Drawing.Size(94, 26)
+        Me.txtoffline.TabIndex = 58
+        Me.txtoffline.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(19, 127)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(59, 20)
+        Me.Label4.TabIndex = 59
+        Me.Label4.Text = "Offline:"
+        '
         'txtnorequired
         '
         Me.txtnorequired.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -316,9 +344,9 @@ Partial Class CambiumDB
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(315, 31)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(180, 20)
+        Me.Label3.Size = New System.Drawing.Size(158, 20)
         Me.Label3.TabIndex = 56
-        Me.Label3.Text = "Percentage on On Time:"
+        Me.Label3.Text = "Percentage On Time:"
         '
         'txtpastduecont
         '
@@ -383,34 +411,6 @@ Partial Class CambiumDB
         Me.lblfecha.Name = "lblfecha"
         Me.lblfecha.Size = New System.Drawing.Size(0, 20)
         Me.lblfecha.TabIndex = 57
-        '
-        'txtoffline
-        '
-        Me.txtoffline.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtoffline.Location = New System.Drawing.Point(114, 121)
-        Me.txtoffline.Name = "txtoffline"
-        Me.txtoffline.Size = New System.Drawing.Size(94, 26)
-        Me.txtoffline.TabIndex = 58
-        Me.txtoffline.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(19, 127)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(59, 20)
-        Me.Label4.TabIndex = 59
-        Me.Label4.Text = "Offline:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(281, 127)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(94, 26)
-        Me.TextBox1.TabIndex = 60
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'CambiumDB
         '
