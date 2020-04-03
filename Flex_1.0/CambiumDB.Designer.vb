@@ -66,6 +66,7 @@ Partial Class CambiumDB
         Me.txtpastdue = New System.Windows.Forms.TextBox()
         Me.txtID = New System.Windows.Forms.TextBox()
         Me.lblfecha = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CambiumBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Flex_DBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,7 +76,7 @@ Partial Class CambiumDB
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(739, 91)
+        Me.Button1.Location = New System.Drawing.Point(993, 9)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(108, 38)
         Me.Button1.TabIndex = 2
@@ -99,25 +100,25 @@ Partial Class CambiumDB
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(863, 103)
+        Me.TextBox2.Location = New System.Drawing.Point(1121, 103)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(220, 26)
+        Me.TextBox2.Size = New System.Drawing.Size(103, 26)
         Me.TextBox2.TabIndex = 8
         '
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(721, 135)
+        Me.TextBox3.Location = New System.Drawing.Point(1027, 103)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(220, 26)
+        Me.TextBox3.Size = New System.Drawing.Size(88, 26)
         Me.TextBox3.TabIndex = 9
         '
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(721, 167)
+        Me.TextBox4.Location = New System.Drawing.Point(1027, 138)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(220, 26)
+        Me.TextBox4.Size = New System.Drawing.Size(88, 26)
         Me.TextBox4.TabIndex = 10
         '
         'DataGridView1
@@ -126,7 +127,7 @@ Partial Class CambiumDB
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.SnDataGridViewTextBoxColumn, Me.StationDataGridViewTextBoxColumn, Me.InstrumentDataGridViewTextBoxColumn, Me.DescriptionDataGridViewTextBoxColumn, Me.FlexcalidDataGridViewTextBoxColumn, Me.AssetDataGridViewTextBoxColumn, Me.SerialDataGridViewTextBoxColumn, Me.StatusDataGridViewTextBoxColumn, Me.CaldateDataGridViewTextBoxColumn, Me.DuedateDataGridViewTextBoxColumn, Me.RepairDataGridViewTextBoxColumn, Me.WebsiteDataGridViewTextBoxColumn, Me.MatchDataGridViewTextBoxColumn, Me.CommentsDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.CambiumBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 199)
+        Me.DataGridView1.Location = New System.Drawing.Point(21, 193)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1203, 380)
         Me.DataGridView1.TabIndex = 11
@@ -238,9 +239,9 @@ Partial Class CambiumDB
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(978, 167)
+        Me.TextBox5.Location = New System.Drawing.Point(1121, 138)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(220, 26)
+        Me.TextBox5.Size = New System.Drawing.Size(103, 26)
         Me.TextBox5.TabIndex = 12
         '
         'ProgressBar1
@@ -389,18 +390,18 @@ Partial Class CambiumDB
         'txtpastdue
         '
         Me.txtpastdue.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtpastdue.Location = New System.Drawing.Point(1107, 11)
+        Me.txtpastdue.Location = New System.Drawing.Point(1177, 11)
         Me.txtpastdue.Name = "txtpastdue"
-        Me.txtpastdue.Size = New System.Drawing.Size(74, 26)
+        Me.txtpastdue.Size = New System.Drawing.Size(38, 26)
         Me.txtpastdue.TabIndex = 55
         Me.txtpastdue.Text = "PastDue"
         '
         'txtID
         '
         Me.txtID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtID.Location = New System.Drawing.Point(1107, 40)
+        Me.txtID.Location = New System.Drawing.Point(1177, 40)
         Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(74, 26)
+        Me.txtID.Size = New System.Drawing.Size(38, 26)
         Me.txtID.TabIndex = 56
         '
         'lblfecha
@@ -412,11 +413,22 @@ Partial Class CambiumDB
         Me.lblfecha.Size = New System.Drawing.Size(0, 20)
         Me.lblfecha.TabIndex = 57
         '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(633, 131)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(112, 53)
+        Me.Button4.TabIndex = 58
+        Me.Button4.Text = "Update Register"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'CambiumDB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1227, 616)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.lblfecha)
         Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.txtpastdue)
@@ -486,4 +498,5 @@ Partial Class CambiumDB
     Friend WithEvents txtoffline As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button4 As Button
 End Class

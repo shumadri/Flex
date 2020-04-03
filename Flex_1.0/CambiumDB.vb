@@ -3,6 +3,8 @@ Public Class CambiumDB
     Private dv As New DataView
     Dim comandosql As New OleDbCommand
 
+    Dim db As New Menu
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'TextBox1.Text = DateDiff(DateInterval.Day, DateTimePicker1.Value, DateTimePicker2.Value)
         conexion()
@@ -53,6 +55,10 @@ Public Class CambiumDB
         Dim date2 As Date
 
         'Norequired
+        'Offline
+        'Offline
+        'Offline
+        'Offline
         'Offline
         'PastDue
         'Ontime
@@ -153,7 +159,10 @@ Public Class CambiumDB
 
     Private Sub conexion()
         Dim cadenaconexion As String
-        cadenaconexion = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
+        'cadenaconexion = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"  'C:\Users\dan25\Documents
+
+        cadenaconexion = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\" & db.Label3.Text & "\Documents\Flex_DB.mdb"
+
         Dim miconexion As OleDbConnection
         miconexion = New OleDbConnection(cadenaconexion)
 
@@ -236,5 +245,11 @@ Public Class CambiumDB
         DataGridView1.DataSource = dv
         'DataGridView2.DataSource = dv
         cnn.Close()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Update_cambium.Show()
+
+
     End Sub
 End Class
