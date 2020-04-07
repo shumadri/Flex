@@ -194,7 +194,7 @@ Partial Class New_cambium
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Norequired", "Offline", "PastDue", "Ontime"})
+        Me.ComboBox1.Items.AddRange(New Object() {"NoRequired", "Offline", "PastDue", "Ontime"})
         Me.ComboBox1.Location = New System.Drawing.Point(454, 193)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(187, 28)
@@ -321,7 +321,7 @@ Partial Class New_cambium
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(674, 34)
+        Me.Button1.Location = New System.Drawing.Point(665, 34)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 88)
         Me.Button1.TabIndex = 46

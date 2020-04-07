@@ -5,29 +5,29 @@ Public Class CambiumDB
 
     Dim db As New Menu
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'TextBox1.Text = DateDiff(DateInterval.Day, DateTimePicker1.Value, DateTimePicker2.Value)
-        conexion()
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        ''TextBox1.Text = DateDiff(DateInterval.Day, DateTimePicker1.Value, DateTimePicker2.Value)
+        'conexion()
 
-        Dim date1 As Date = txtnorequired.Text
-        Dim date2 As Date = TextBox2.Text
+        'Dim date1 As Date = txtnorequired.Text
+        'Dim date2 As Date = TextBox2.Text
 
 
-        TextBox3.Text = DateDiff(DateInterval.Day, date1, date2)
-        TextBox4.Text = DateTimePicker1.Value
+        'TextBox3.Text = DateDiff(DateInterval.Day, date1, date2)
+        'TextBox4.Text = DateTimePicker1.Value
 
-        Dim cont As Integer = 0
-        'recorre el grid fila por fila
-        For Each r As DataGridViewRow In DataGridView1.Rows
+        'Dim cont As Integer = 0
+        ''recorre el grid fila por fila
+        'For Each r As DataGridViewRow In DataGridView1.Rows
 
-            'en cells() va el indice de la columna que quiere verificar que tenga datos
-            If r.Cells(6).Value = "TG0299" Then
-                cont += 1
-            End If
-        Next
-        TextBox5.Text = cont
+        '    'en cells() va el indice de la columna que quiere verificar que tenga datos
+        '    If r.Cells(6).Value = "TG0299" Then
+        '        cont += 1
+        '    End If
+        'Next
+        'TextBox5.Text = cont
 
-        DateTimePicker2.Value = DateTimePicker1.Value.AddMonths(24)  'Colocar validacion dependiendo de los meses (12 o 24), verificar accion al usar no required.
+        'DateTimePicker2.Value = DateTimePicker1.Value.AddMonths(24)  'Colocar validacion dependiendo de los meses (12 o 24), verificar accion al usar no required.
 
 
 
@@ -36,12 +36,26 @@ Public Class CambiumDB
 
     Private Sub CambiumDB_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'Flex_DBDataSet.Cambium' table. You can move, or remove it, as needed.
-        Me.CambiumTableAdapter.Fill(Me.Flex_DBDataSet.Cambium)
+        'Me.CambiumTableAdapter.Fill(Me.Flex_DBDataSet.Cambium)
+
+        'Carga los datos de la base de datos en el datagridview1
+        Dim cnn As New OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb")
+        Dim da As New OleDbDataAdapter("SELECT * FROM Cambium", cnn)
+        Dim ds As New DataSet
+        da.Fill(ds)
+        'DataGridView1.DataSource = ds.Tables(0)
+        dv.Table = ds.Tables(0)
+        DataGridView1.DataSource = dv
+        'DataGridView2.DataSource = dv
+        cnn.Close()
+
+
 
         ProgressBar1.Value = "70"
         lblfecha.Text = DateTime.Now.ToString("MM/dd/yyyy")
-        ' Texto para validar la sincronizacion del github.-.....
+
         RecorrerDGVcambium()
+
     End Sub
 
     Private Sub RecorrerDGVcambium()
@@ -53,6 +67,8 @@ Public Class CambiumDB
         Dim contoffline As Integer = 0
         Dim date1 As Date = DateTime.Now.ToString("MM/dd/yyyy")
         Dim date2 As Date
+        Dim porcentaje As Integer = 0
+
 
         'Norequired
         'Offline
@@ -129,6 +145,10 @@ Public Class CambiumDB
         txtpastduecont.Text = contpasdue
         TextBox1.Text = contotal - 1
 
+        porcentaje = (contontime / (contotal - 1)) * 100
+        ProgressBar1.Value = porcentaje
+        Label5.Text = porcentaje & "%"
+
 
         'Fin del codigo......
         'Fin de algoritmo---------------------------------------------
@@ -157,36 +177,36 @@ Public Class CambiumDB
 
     End Sub
 
-    Private Sub conexion()
-        Dim cadenaconexion As String
-        'cadenaconexion = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"  'C:\Users\dan25\Documents
+    'Private Sub conexion()
+    '    Dim cadenaconexion As String
+    '    'cadenaconexion = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"  'C:\Users\dan25\Documents
 
-        cadenaconexion = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\" & db.Label3.Text & "\Documents\Flex_DB.mdb"
+    '    cadenaconexion = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\" & db.Label3.Text & "\Documents\Flex_DB.mdb"
 
-        Dim miconexion As OleDbConnection
-        miconexion = New OleDbConnection(cadenaconexion)
+    '    Dim miconexion As OleDbConnection
+    '    miconexion = New OleDbConnection(cadenaconexion)
 
-        Dim PNtableadapter As OleDbDataAdapter
-        PNtableadapter = New OleDbDataAdapter
+    '    Dim PNtableadapter As OleDbDataAdapter
+    '    PNtableadapter = New OleDbDataAdapter
 
-        PNtableadapter.SelectCommand = New OleDbCommand("SELECT * FROM Cambium WHERE  Id= 1", miconexion)
-        Dim PNdataset As DataSet
-        PNdataset = New DataSet
+    '    PNtableadapter.SelectCommand = New OleDbCommand("SELECT * FROM Cambium WHERE  Id= 1", miconexion)
+    '    Dim PNdataset As DataSet
+    '    PNdataset = New DataSet
 
-        PNdataset.Tables.Add("Cambium")
-        PNtableadapter.Fill(PNdataset.Tables("Cambium"))
+    '    PNdataset.Tables.Add("Cambium")
+    '    PNtableadapter.Fill(PNdataset.Tables("Cambium"))
 
-        txtnorequired.DataBindings.Clear()
-        txtnorequired.DataBindings.Add("Text", PNdataset.Tables("Cambium"), "cal_date")
+    '    txtnorequired.DataBindings.Clear()
+    '    txtnorequired.DataBindings.Add("Text", PNdataset.Tables("Cambium"), "cal_date")
 
 
-        TextBox2.DataBindings.Clear()
-        TextBox2.DataBindings.Add("Text", PNdataset.Tables("Cambium"), "due_date")
+    '    TextBox2.DataBindings.Clear()
+    '    TextBox2.DataBindings.Add("Text", PNdataset.Tables("Cambium"), "due_date")
 
-        miconexion.Close()
-        'data.
+    '    miconexion.Close()
+    '    'data.
 
-    End Sub
+    'End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         New_cambium.Show()
@@ -248,8 +268,12 @@ Public Class CambiumDB
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Update_cambium.Show()
+        f.Show()
 
 
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Me.Close()
     End Sub
 End Class

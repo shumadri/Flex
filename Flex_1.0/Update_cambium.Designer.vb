@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Update_cambium
+Partial Class f
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,7 +24,6 @@ Partial Class Update_cambium
     Private Sub InitializeComponent()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -54,43 +53,39 @@ Partial Class Update_cambium
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(658, 192)
+        Me.Label15.Location = New System.Drawing.Point(944, 139)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(104, 20)
+        Me.Label15.Size = New System.Drawing.Size(109, 20)
         Me.Label15.TabIndex = 82
-        Me.Label15.Text = "Cal. Months"
+        Me.Label15.Text = "Cal. Months:"
         '
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(644, 215)
+        Me.TextBox2.Location = New System.Drawing.Point(1069, 135)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(127, 24)
         Me.TextBox2.TabIndex = 81
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'ComboBox5
-        '
-        Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Items.AddRange(New Object() {"Norequired", "Offline", "PastDue"})
-        Me.ComboBox5.Location = New System.Drawing.Point(141, 42)
-        Me.ComboBox5.Name = "ComboBox5"
-        Me.ComboBox5.Size = New System.Drawing.Size(498, 28)
-        Me.ComboBox5.TabIndex = 80
-        '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(656, 268)
+        Me.Button2.Location = New System.Drawing.Point(860, 184)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(115, 51)
+        Me.Button2.Size = New System.Drawing.Size(138, 42)
         Me.Button2.TabIndex = 79
         Me.Button2.Text = "CLOSE"
         Me.Button2.UseVisualStyleBackColor = True
@@ -98,9 +93,9 @@ Partial Class Update_cambium
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(671, 14)
+        Me.Button1.Location = New System.Drawing.Point(664, 184)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 88)
+        Me.Button1.Size = New System.Drawing.Size(178, 42)
         Me.Button1.TabIndex = 78
         Me.Button1.Text = "SAVE"
         Me.Button1.UseVisualStyleBackColor = True
@@ -108,7 +103,7 @@ Partial Class Update_cambium
         'TextBox8
         '
         Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(141, 293)
+        Me.TextBox8.Location = New System.Drawing.Point(142, 133)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(497, 26)
         Me.TextBox8.TabIndex = 77
@@ -118,7 +113,7 @@ Partial Class Update_cambium
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(16, 299)
+        Me.Label14.Location = New System.Drawing.Point(17, 139)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(99, 20)
         Me.Label14.TabIndex = 76
@@ -129,9 +124,9 @@ Partial Class Update_cambium
         Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox4.FormattingEnabled = True
         Me.ComboBox4.Items.AddRange(New Object() {"YES", "NO"})
-        Me.ComboBox4.Location = New System.Drawing.Point(538, 250)
+        Me.ComboBox4.Location = New System.Drawing.Point(768, 133)
         Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(101, 28)
+        Me.ComboBox4.Size = New System.Drawing.Size(148, 28)
         Me.ComboBox4.TabIndex = 75
         '
         'ComboBox3
@@ -139,7 +134,7 @@ Partial Class Update_cambium
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"YES", "NO"})
-        Me.ComboBox3.Location = New System.Drawing.Point(360, 250)
+        Me.ComboBox3.Location = New System.Drawing.Point(1059, 99)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(85, 28)
         Me.ComboBox3.TabIndex = 74
@@ -148,7 +143,7 @@ Partial Class Update_cambium
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(459, 258)
+        Me.Label13.Location = New System.Drawing.Point(689, 141)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(63, 20)
         Me.Label13.TabIndex = 73
@@ -158,27 +153,27 @@ Partial Class Update_cambium
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(241, 258)
+        Me.Label12.Location = New System.Drawing.Point(940, 107)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(113, 20)
+        Me.Label12.Size = New System.Drawing.Size(123, 20)
         Me.Label12.TabIndex = 72
-        Me.Label12.Text = "In Web Site?"
+        Me.Label12.Text = "In Web Site? :"
         '
         'ComboBox2
         '
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"YES", "NO"})
-        Me.ComboBox2.Location = New System.Drawing.Point(142, 250)
+        Me.ComboBox2.Location = New System.Drawing.Point(768, 99)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(90, 28)
+        Me.ComboBox2.Size = New System.Drawing.Size(148, 28)
         Me.ComboBox2.TabIndex = 71
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(39, 258)
+        Me.Label11.Location = New System.Drawing.Point(681, 107)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(67, 20)
         Me.Label11.TabIndex = 70
@@ -187,9 +182,9 @@ Partial Class Update_cambium
         'DateTimePicker2
         '
         Me.DateTimePicker2.CustomFormat = """MM/dd/yyy"""
-        Me.DateTimePicker2.Location = New System.Drawing.Point(451, 215)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(1059, 67)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(187, 20)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(183, 20)
         Me.DateTimePicker2.TabIndex = 69
         Me.DateTimePicker2.Value = New Date(2020, 3, 27, 0, 0, 0, 0)
         '
@@ -197,7 +192,7 @@ Partial Class Update_cambium
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(352, 215)
+        Me.Label10.Location = New System.Drawing.Point(944, 67)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(91, 20)
         Me.Label10.TabIndex = 68
@@ -207,9 +202,9 @@ Partial Class Update_cambium
         '
         Me.DateTimePicker1.CustomFormat = """MM/dd/yyy"""
         Me.DateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DateTimePicker1.Location = New System.Drawing.Point(142, 215)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(1059, 40)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(190, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(183, 20)
         Me.DateTimePicker1.TabIndex = 67
         Me.DateTimePicker1.Value = New Date(2020, 3, 27, 0, 0, 0, 0)
         '
@@ -217,7 +212,7 @@ Partial Class Update_cambium
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(21, 215)
+        Me.Label9.Location = New System.Drawing.Point(944, 41)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(89, 20)
         Me.Label9.TabIndex = 66
@@ -228,16 +223,16 @@ Partial Class Update_cambium
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Norequired", "Offline", "PastDue", "Ontime"})
-        Me.ComboBox1.Location = New System.Drawing.Point(451, 173)
+        Me.ComboBox1.Location = New System.Drawing.Point(1059, 3)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(187, 28)
+        Me.ComboBox1.Size = New System.Drawing.Size(156, 28)
         Me.ComboBox1.TabIndex = 65
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(378, 181)
+        Me.Label8.Location = New System.Drawing.Point(957, 11)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(67, 20)
         Me.Label8.TabIndex = 64
@@ -246,9 +241,9 @@ Partial Class Update_cambium
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(142, 170)
+        Me.TextBox7.Location = New System.Drawing.Point(768, 67)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(190, 26)
+        Me.TextBox7.Size = New System.Drawing.Size(156, 26)
         Me.TextBox7.TabIndex = 63
         Me.TextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -256,7 +251,7 @@ Partial Class Update_cambium
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(39, 176)
+        Me.Label7.Location = New System.Drawing.Point(688, 73)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(60, 20)
         Me.Label7.TabIndex = 62
@@ -265,9 +260,9 @@ Partial Class Update_cambium
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(449, 128)
+        Me.TextBox5.Location = New System.Drawing.Point(768, 35)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(190, 26)
+        Me.TextBox5.Size = New System.Drawing.Size(156, 26)
         Me.TextBox5.TabIndex = 61
         Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -275,7 +270,7 @@ Partial Class Update_cambium
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(383, 134)
+        Me.Label6.Location = New System.Drawing.Point(688, 41)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(60, 20)
         Me.Label6.TabIndex = 60
@@ -284,9 +279,9 @@ Partial Class Update_cambium
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(142, 128)
+        Me.TextBox4.Location = New System.Drawing.Point(768, 3)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(190, 26)
+        Me.TextBox4.Size = New System.Drawing.Size(156, 26)
         Me.TextBox4.TabIndex = 59
         Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -294,7 +289,7 @@ Partial Class Update_cambium
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(12, 134)
+        Me.Label5.Location = New System.Drawing.Point(660, 9)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(102, 20)
         Me.Label5.TabIndex = 58
@@ -367,14 +362,67 @@ Partial Class Update_cambium
         Me.Label1.TabIndex = 51
         Me.Label1.Text = "Serial Number:"
         '
-        'Update_cambium
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(9, 232)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(1275, 397)
+        Me.DataGridView1.TabIndex = 83
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox9.Location = New System.Drawing.Point(209, 178)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(430, 26)
+        Me.TextBox9.TabIndex = 85
+        Me.TextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(17, 184)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(186, 20)
+        Me.Label16.TabIndex = 84
+        Me.Label16.Text = "Search by Instrument:"
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox10.Location = New System.Drawing.Point(142, 50)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.ReadOnly = True
+        Me.TextBox10.Size = New System.Drawing.Size(497, 26)
+        Me.TextBox10.TabIndex = 86
+        Me.TextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(1073, 206)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(0, 20)
+        Me.Label17.TabIndex = 87
+        '
+        'f
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1229, 609)
+        Me.ClientSize = New System.Drawing.Size(1296, 641)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.ComboBox5)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox8)
@@ -404,8 +452,9 @@ Partial Class Update_cambium
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Update_cambium"
+        Me.Name = "f"
         Me.Text = "Update_cambium"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -413,7 +462,6 @@ Partial Class Update_cambium
 
     Friend WithEvents Label15 As Label
     Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ComboBox5 As ComboBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox8 As TextBox
@@ -443,4 +491,9 @@ Partial Class Update_cambium
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents Label17 As Label
 End Class

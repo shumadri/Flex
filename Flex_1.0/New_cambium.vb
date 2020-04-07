@@ -9,6 +9,16 @@ Public Class New_cambium
     Dim datos As New DataTable
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+        If TextBox6.Text = "" Then
+            MsgBox("Write a serial number")
+            Exit Sub
+        End If
+        If TextBox1.Text = "" Then
+            MsgBox("Write a serial station")
+            Exit Sub
+        End If
+
+
 
         Try
             Dim conect_string1 As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
@@ -67,6 +77,8 @@ Public Class New_cambium
             MessageBox.Show(ex.Message)
             'MessageBox.Show("Problema al conectar a BD")
         End Try
+
+        ComboBox1.Text = ""
     End Sub
 
     Private Sub ComboBox5_TextChanged(sender As Object, e As EventArgs) Handles ComboBox5.TextChanged
@@ -108,5 +120,22 @@ Public Class New_cambium
             MessageBox.Show(ex.Message)
             ' MessageBox.Show("Sucedio un error al cargar los datos, por favor vuelva a intentar")
         End Try
+    End Sub
+
+    Private Sub ComboBox5_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox5.SelectedIndexChanged
+        If TextBox2.Text = "12" Then
+            DateTimePicker2.Value = DateTimePicker1.Value.AddMonths(12)
+            ComboBox1.Text = ""
+        End If
+
+        If TextBox2.Text = "24" Then
+            DateTimePicker2.Value = DateTimePicker1.Value.AddMonths(24)
+            ComboBox1.Text = ""
+        End If
+
+        If TextBox2.Text = "NoRequired" Then
+            ComboBox1.Text = "NoRequired"
+        End If
+
     End Sub
 End Class
