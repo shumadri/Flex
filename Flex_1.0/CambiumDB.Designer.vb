@@ -48,6 +48,7 @@ Partial Class CambiumDB
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.lblfecha = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CambiumBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Flex_DBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -81,6 +82,7 @@ Partial Class CambiumDB
         '
         'ProgressBar1
         '
+        Me.ProgressBar1.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.ProgressBar1.Location = New System.Drawing.Point(237, 63)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(333, 56)
@@ -292,11 +294,22 @@ Partial Class CambiumDB
         Me.lblfecha.Size = New System.Drawing.Size(0, 20)
         Me.lblfecha.TabIndex = 62
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(751, 71)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 53)
+        Me.Button1.TabIndex = 63
+        Me.Button1.Text = "Update Table"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'CambiumDB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1169, 616)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblfecha)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -342,4 +355,5 @@ Partial Class CambiumDB
     Friend WithEvents Label66 As Label
     Friend WithEvents lblfecha As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Button1 As Button
 End Class

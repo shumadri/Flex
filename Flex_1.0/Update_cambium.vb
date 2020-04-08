@@ -21,24 +21,28 @@ Public Class f
     End Sub
 
     Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
-        TextBox6.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value()
-        TextBox1.Text = DataGridView1.Rows(e.RowIndex).Cells(2).Value()
-        TextBox10.Text = DataGridView1.Rows(e.RowIndex).Cells(3).Value()
-        TextBox3.Text = DataGridView1.Rows(e.RowIndex).Cells(4).Value()
-        TextBox4.Text = DataGridView1.Rows(e.RowIndex).Cells(5).Value()
-        TextBox5.Text = DataGridView1.Rows(e.RowIndex).Cells(6).Value()
-        TextBox7.Text = DataGridView1.Rows(e.RowIndex).Cells(7).Value()
-        ComboBox1.Text = DataGridView1.Rows(e.RowIndex).Cells(8).Value()
+        TextBox6.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value().ToString
+        TextBox1.Text = DataGridView1.Rows(e.RowIndex).Cells(2).Value().ToString
+        TextBox10.Text = DataGridView1.Rows(e.RowIndex).Cells(3).Value().ToString
+        TextBox3.Text = DataGridView1.Rows(e.RowIndex).Cells(4).Value().ToString
+        TextBox4.Text = DataGridView1.Rows(e.RowIndex).Cells(5).Value().ToString
+        TextBox5.Text = DataGridView1.Rows(e.RowIndex).Cells(6).Value().ToString
+        TextBox7.Text = DataGridView1.Rows(e.RowIndex).Cells(7).Value().ToString
+        ComboBox1.Text = DataGridView1.Rows(e.RowIndex).Cells(8).Value().ToString
         DateTimePicker1.Value = DataGridView1.Rows(e.RowIndex).Cells(9).Value()
         DateTimePicker2.Value = DataGridView1.Rows(e.RowIndex).Cells(10).Value()
-        ComboBox2.Text = DataGridView1.Rows(e.RowIndex).Cells(11).Value()
-        TextBox2.Text = DataGridView1.Rows(e.RowIndex).Cells(12).Value()
-        ComboBox3.Text = DataGridView1.Rows(e.RowIndex).Cells(13).Value()
-        ComboBox4.Text = DataGridView1.Rows(e.RowIndex).Cells(14).Value()
-        TextBox8.Text = DataGridView1.Rows(e.RowIndex).Cells(15).Value()
+        ComboBox2.Text = DataGridView1.Rows(e.RowIndex).Cells(11).Value().ToString
+        TextBox2.Text = DataGridView1.Rows(e.RowIndex).Cells(12).Value().ToString
+        ComboBox3.Text = DataGridView1.Rows(e.RowIndex).Cells(13).Value().ToString
+        ComboBox4.Text = DataGridView1.Rows(e.RowIndex).Cells(14).Value().ToString
+        TextBox8.Text = DataGridView1.Rows(e.RowIndex).Cells(15).Value().ToString
 
 
 
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
     End Sub
 End Class

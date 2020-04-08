@@ -51,7 +51,7 @@ Public Class CambiumDB
 
 
 
-        ProgressBar1.Value = "70"
+        'ProgressBar1.Value = "70"
         lblfecha.Text = DateTime.Now.ToString("MM/dd/yyyy")
 
         RecorrerDGVcambium()
@@ -93,7 +93,7 @@ Public Class CambiumDB
             date2 = r.Cells(10).Value()
             ' Dim id As String = r.Cells(0).Value()
             'En cells() va el indice de la columna que quiere verificar que tenga datos
-            If r.Cells(8).Value = "Norequired" Then
+            If r.Cells(8).Value = "NoRequired" Then
                 contnorequired += 1   'Cuenta la cantidad de veces que apare "Norequired"
             Else
                 If r.Cells(8).Value = "Offline" Then
@@ -108,17 +108,6 @@ Public Class CambiumDB
                 End If
             End If
 
-
-
-
-            'If r.Cells(6).Value = "Offline" Then
-            '    contoffline += 1   'Cuenta la cantidad de veces que apare "Offline"
-            'End If
-
-            'If r.Cells(10).Value > DateTime.Now.ToString("dd/MM/yyyy") Then
-            '    txtID.Text = r.Cells(0).Value
-            '    SQLUPdateCambium()
-            'End If
         Next
 
         actualizardgv()
@@ -130,7 +119,7 @@ Public Class CambiumDB
                 contpasdue += 1
             End If
 
-            If r.Cells(8).Value = "Ontime" Then
+            If r.Cells(8).Value = "OnTime" Then
                 contontime += 1
             End If
 
@@ -143,10 +132,12 @@ Public Class CambiumDB
         txtontime.Text = contontime
         txtoffline.Text = contoffline
         txtpastduecont.Text = contpasdue
-        TextBox1.Text = contotal - 1
+        TextBox1.Text = contotal
 
-        porcentaje = (contontime / (contotal - 1)) * 100
+        porcentaje = (contontime / (contpasdue + contontime)) * 100
         ProgressBar1.Value = porcentaje
+        ProgressBar1.ForeColor = Color.Red
+
         Label5.Text = porcentaje & "%"
 
 
@@ -275,5 +266,25 @@ Public Class CambiumDB
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Me.Close()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        'Carga los datos de la base de datos en el datagridview1
+        Dim cnn As New OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb")
+        Dim da As New OleDbDataAdapter("SELECT * FROM Cambium", cnn)
+        Dim ds As New DataSet
+        da.Fill(ds)
+        'DataGridView1.DataSource = ds.Tables(0)
+        dv.Table = ds.Tables(0)
+        DataGridView1.DataSource = dv
+        'DataGridView2.DataSource = dv
+        cnn.Close()
+
+
+
+        'ProgressBar1.Value = "70"
+        lblfecha.Text = DateTime.Now.ToString("MM/dd/yyyy")
+
+        RecorrerDGVcambium()
     End Sub
 End Class

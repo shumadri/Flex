@@ -10,15 +10,62 @@ Public Class New_cambium
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         If TextBox6.Text = "" Then
-            MsgBox("Write a serial number")
+            MessageBox.Show("Please,Write a serial number", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
         If TextBox1.Text = "" Then
-            MsgBox("Write a serial station")
+            MessageBox.Show("Please,Write a station", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
         End If
 
+        If ComboBox5.Text = "Select Instrument" Or ComboBox5.Text = "" Then
+            MessageBox.Show("Please,Select an Instrument", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
 
+        If TextBox3.Text = "" Then
+            MessageBox.Show("Please,Write a description", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        If TextBox4.Text = "" Then
+            MessageBox.Show("Please,Write a Flex Cal ID", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        If TextBox5.Text = "" Then
+            MessageBox.Show("Please,Write an Asset", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        If TextBox7.Text = "" Then
+            MessageBox.Show("Please,Write a Serial", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        If ComboBox1.Text = "" Then
+            MessageBox.Show("Please,Select the Instrument´s status", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        If ComboBox2.Text = "" Then
+            MessageBox.Show("Please,Select the Repair´s status", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+        If ComboBox3.Text = "" Then
+            MessageBox.Show("Please,Select the Status in website", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        If ComboBox4.Text = "" Then
+            MessageBox.Show("Please,Select the Status in Match", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        If TextBox8.Text = "" Then
+            MessageBox.Show("Please,Write a Comment", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
 
         Try
             Dim conect_string1 As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
@@ -49,6 +96,20 @@ Public Class New_cambium
             Comando1.Parameters.AddWithValue("@fecha_carga1", DateTime.Now.ToString("dd/MM/yyyy") & " " & DateTime.Now.ToLongTimeString)
             Comando1.ExecuteNonQuery()
             conect1.Close()
+            MessageBox.Show("Data was saved in the DataBase successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            TextBox6.Text = ""
+            TextBox1.Text = ""
+            ComboBox5.Text = "Select Instrument"
+            TextBox3.Text = ""
+            TextBox4.Text = ""
+            TextBox5.Text = ""
+            TextBox7.Text = ""
+            ComboBox1.Text = ""
+            ComboBox2.Text = ""
+            ComboBox3.Text = ""
+            ComboBox4.Text = ""
+            TextBox8.Text = ""
+            TextBox2.Text = ""
         Catch ex As Exception
             MessageBox.Show(ex.Message)
 
@@ -126,16 +187,30 @@ Public Class New_cambium
         If TextBox2.Text = "12" Then
             DateTimePicker2.Value = DateTimePicker1.Value.AddMonths(12)
             ComboBox1.Text = ""
+            ComboBox1.Enabled = True
+            DateTimePicker1.Enabled = True
+            DateTimePicker2.Enabled = True
         End If
 
         If TextBox2.Text = "24" Then
             DateTimePicker2.Value = DateTimePicker1.Value.AddMonths(24)
             ComboBox1.Text = ""
+            ComboBox1.Enabled = True
+            DateTimePicker1.Enabled = True
+            DateTimePicker2.Enabled = True
         End If
 
         If TextBox2.Text = "NoRequired" Then
             ComboBox1.Text = "NoRequired"
+            ComboBox1.Enabled = False
+            DateTimePicker2.Value = DateTimePicker1.Value.AddMonths(10)
+            DateTimePicker1.Enabled = False
+            DateTimePicker2.Enabled = False
         End If
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Close()
     End Sub
 End Class
