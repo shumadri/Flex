@@ -134,7 +134,7 @@ Partial Class f
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"YES", "NO"})
-        Me.ComboBox3.Location = New System.Drawing.Point(1059, 99)
+        Me.ComboBox3.Location = New System.Drawing.Point(1069, 99)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(85, 28)
         Me.ComboBox3.TabIndex = 74
@@ -182,7 +182,7 @@ Partial Class f
         'DateTimePicker2
         '
         Me.DateTimePicker2.CustomFormat = """MM/dd/yyy"""
-        Me.DateTimePicker2.Location = New System.Drawing.Point(1059, 67)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(1069, 67)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(183, 20)
         Me.DateTimePicker2.TabIndex = 69
@@ -202,7 +202,7 @@ Partial Class f
         '
         Me.DateTimePicker1.CustomFormat = """MM/dd/yyy"""
         Me.DateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DateTimePicker1.Location = New System.Drawing.Point(1059, 40)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(1069, 40)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(183, 20)
         Me.DateTimePicker1.TabIndex = 67
@@ -223,7 +223,7 @@ Partial Class f
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Norequired", "Offline", "PastDue", "Ontime"})
-        Me.ComboBox1.Location = New System.Drawing.Point(1059, 3)
+        Me.ComboBox1.Location = New System.Drawing.Point(1069, 3)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(156, 28)
         Me.ComboBox1.TabIndex = 65
