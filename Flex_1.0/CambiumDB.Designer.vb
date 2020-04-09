@@ -49,10 +49,13 @@ Partial Class CambiumDB
         Me.Button5 = New System.Windows.Forms.Button()
         Me.lblfecha = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CambiumBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Flex_DBDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -92,7 +95,7 @@ Partial Class CambiumDB
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(633, 12)
+        Me.Button2.Location = New System.Drawing.Point(6, 34)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(112, 53)
         Me.Button2.TabIndex = 14
@@ -102,7 +105,7 @@ Partial Class CambiumDB
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(633, 71)
+        Me.Button3.Location = New System.Drawing.Point(6, 115)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(112, 53)
         Me.Button3.TabIndex = 15
@@ -268,7 +271,7 @@ Partial Class CambiumDB
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(633, 131)
+        Me.Button4.Location = New System.Drawing.Point(156, 35)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(112, 53)
         Me.Button4.TabIndex = 58
@@ -278,7 +281,7 @@ Partial Class CambiumDB
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(751, 13)
+        Me.Button5.Location = New System.Drawing.Point(329, 80)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(112, 53)
         Me.Button5.TabIndex = 59
@@ -297,26 +300,47 @@ Partial Class CambiumDB
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(751, 71)
+        Me.Button1.Location = New System.Drawing.Point(156, 115)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 53)
         Me.Button1.TabIndex = 63
         Me.Button1.Text = "Update Table"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.Button5)
+        Me.GroupBox2.Controls.Add(Me.Button4)
+        Me.GroupBox2.Controls.Add(Me.Button3)
+        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(598, 5)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(447, 191)
+        Me.GroupBox2.TabIndex = 64
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Menu"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(1051, 146)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(0, 20)
+        Me.Label6.TabIndex = 65
+        '
         'CambiumDB
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1169, 616)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.lblfecha)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.txtID)
         Me.Controls.Add(Me.txtpastdue)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "CambiumDB"
@@ -326,6 +350,7 @@ Partial Class CambiumDB
         CType(Me.Flex_DBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -356,4 +381,6 @@ Partial Class CambiumDB
     Friend WithEvents lblfecha As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Label6 As Label
 End Class

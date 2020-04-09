@@ -58,6 +58,8 @@ Partial Class f
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -74,7 +76,7 @@ Partial Class f
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(1069, 135)
+        Me.TextBox2.Location = New System.Drawing.Point(1066, 135)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(127, 24)
         Me.TextBox2.TabIndex = 81
@@ -126,7 +128,7 @@ Partial Class f
         Me.ComboBox4.Items.AddRange(New Object() {"YES", "NO"})
         Me.ComboBox4.Location = New System.Drawing.Point(768, 133)
         Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(148, 28)
+        Me.ComboBox4.Size = New System.Drawing.Size(156, 28)
         Me.ComboBox4.TabIndex = 75
         '
         'ComboBox3
@@ -134,9 +136,9 @@ Partial Class f
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"YES", "NO"})
-        Me.ComboBox3.Location = New System.Drawing.Point(1059, 99)
+        Me.ComboBox3.Location = New System.Drawing.Point(1066, 99)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(85, 28)
+        Me.ComboBox3.Size = New System.Drawing.Size(64, 28)
         Me.ComboBox3.TabIndex = 74
         '
         'Label13
@@ -166,7 +168,7 @@ Partial Class f
         Me.ComboBox2.Items.AddRange(New Object() {"YES", "NO"})
         Me.ComboBox2.Location = New System.Drawing.Point(768, 99)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(148, 28)
+        Me.ComboBox2.Size = New System.Drawing.Size(156, 28)
         Me.ComboBox2.TabIndex = 71
         '
         'Label11
@@ -182,7 +184,7 @@ Partial Class f
         'DateTimePicker2
         '
         Me.DateTimePicker2.CustomFormat = """MM/dd/yyy"""
-        Me.DateTimePicker2.Location = New System.Drawing.Point(1059, 67)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(1066, 67)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(183, 20)
         Me.DateTimePicker2.TabIndex = 69
@@ -202,7 +204,7 @@ Partial Class f
         '
         Me.DateTimePicker1.CustomFormat = """MM/dd/yyy"""
         Me.DateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.DateTimePicker1.Location = New System.Drawing.Point(1059, 40)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(1066, 40)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(183, 20)
         Me.DateTimePicker1.TabIndex = 67
@@ -223,7 +225,7 @@ Partial Class f
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Norequired", "Offline", "PastDue", "Ontime"})
-        Me.ComboBox1.Location = New System.Drawing.Point(1059, 3)
+        Me.ComboBox1.Location = New System.Drawing.Point(1066, 3)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(156, 28)
         Me.ComboBox1.TabIndex = 65
@@ -411,11 +413,33 @@ Partial Class f
         Me.Label17.Size = New System.Drawing.Size(0, 20)
         Me.Label17.TabIndex = 87
         '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(1136, 107)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(33, 20)
+        Me.Label18.TabIndex = 89
+        Me.Label18.Text = "ID:"
+        '
+        'TextBox11
+        '
+        Me.TextBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox11.Location = New System.Drawing.Point(1171, 103)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.ReadOnly = True
+        Me.TextBox11.Size = New System.Drawing.Size(78, 24)
+        Me.TextBox11.TabIndex = 88
+        Me.TextBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'f
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1296, 641)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.TextBox11)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.TextBox10)
         Me.Controls.Add(Me.TextBox9)
@@ -496,4 +520,6 @@ Partial Class f
     Friend WithEvents Label16 As Label
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents TextBox11 As TextBox
 End Class

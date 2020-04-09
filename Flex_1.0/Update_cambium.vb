@@ -1,9 +1,12 @@
 ﻿Imports System.Data.OleDb
 Public Class f
+    Dim comando As New OleDbCommand
+    Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
+
     Private dv As New DataView
     Private Sub Update_cambium_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Carga los datos de la base de datos en el datagridview1
-        Dim cnn As New OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb")
+        Dim cnn As New OleDbConnection(dbsource)
         Dim da As New OleDbDataAdapter("SELECT * FROM Cambium", cnn)
         Dim ds As New DataSet
         da.Fill(ds)
@@ -21,6 +24,7 @@ Public Class f
     End Sub
 
     Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
+        TextBox11.Text = DataGridView1.Rows(e.RowIndex).Cells(0).Value().ToString
         TextBox6.Text = DataGridView1.Rows(e.RowIndex).Cells(1).Value().ToString
         TextBox1.Text = DataGridView1.Rows(e.RowIndex).Cells(2).Value().ToString
         TextBox10.Text = DataGridView1.Rows(e.RowIndex).Cells(3).Value().ToString
@@ -37,12 +41,44 @@ Public Class f
         ComboBox4.Text = DataGridView1.Rows(e.RowIndex).Cells(14).Value().ToString
         TextBox8.Text = DataGridView1.Rows(e.RowIndex).Cells(15).Value().ToString
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim date1 As Date = DateTimePicker1.Value
+        Dim date2 As Date = DateTimePicker2.Value
+        If TextBox10.Text = "" Or TextBox11.Text = "" Then
+            MessageBox.Show("Please select an instrument to update", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Exit Sub
+        End If
+
+        Try
+
+            Dim cnn As New OleDbConnection(dbsource)
+            cnn.Open()
+            Dim actualizar As String
+            actualizar = "UPDATE Cambium SET [sn]='" & TextBox6.Text & "', [station]='" & TextBox1.Text.ToString & "', [description]='" & TextBox3.Text.ToString & "', [flex_cal_id]='" & TextBox4.Text.ToString & "', [asset]='" & TextBox5.Text.ToString & "', [serial]='" & TextBox7.Text.ToString & "', [status]='" & ComboBox1.Text.ToString & "', [cal_date]='" & date1 & "', [due_date]='" & date2 & "', [repair]='" & ComboBox2.Text.ToString & "', [months]='" & TextBox2.Text.ToString & "', [match]='" & ComboBox4.Text.ToString & "', [comments]='" & TextBox8.Text.ToString & "' WHERE ID='" & TextBox11.Text.ToString & "' AND instrument='" & TextBox10.Text.ToString & "'"
+            comando = New OleDbCommand(actualizar, cnn)
+            comando.ExecuteNonQuery()
+            MsgBox("The update was successfully.", MsgBoxStyle.Information, "Notification")
+
+            'Dim da As New OleDbDataAdapter("SELECT * FROM Cambium", cnn)
+            'Dim ds As New DataSet
+            'da.Fill(ds)
+            ''DataGridView1.DataSource = ds.Tables(0)
+            'dv.Table = ds.Tables(0)
+            'DataGridView1.DataSource = dv
+            ''DataGridView2.DataSource = dv
+            'cnn.Close()
+            cnn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
 
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Close()
     End Sub
 End Class

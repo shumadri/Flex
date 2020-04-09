@@ -4,6 +4,7 @@ Public Class CambiumDB
     Dim comandosql As New OleDbCommand
 
     Dim db As New Menu
+    Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         ''TextBox1.Text = DateDiff(DateInterval.Day, DateTimePicker1.Value, DateTimePicker2.Value)
@@ -39,7 +40,7 @@ Public Class CambiumDB
         'Me.CambiumTableAdapter.Fill(Me.Flex_DBDataSet.Cambium)
 
         'Carga los datos de la base de datos en el datagridview1
-        Dim cnn As New OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb")
+        Dim cnn As New OleDbConnection(dbsource)
         Dim da As New OleDbDataAdapter("SELECT * FROM Cambium", cnn)
         Dim ds As New DataSet
         da.Fill(ds)
@@ -229,7 +230,7 @@ Public Class CambiumDB
 
         Try
 
-            Dim cnn As New OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb")
+            Dim cnn As New OleDbConnection(dbsource)
             cnn.Open()
             Dim actualizar As String
             'actualizar = "UPDATE Cabler SET NP_Jacket='" & TextBox1.Text & "', Traza_Jacket='" & TextBox2.Text & "', Cant_Jacket='" & TextBox6.Text & "', Fecha_Jacket='" & Label4.Text & "' WHERE Traza_cabler='" & TextBox3.Text & "'"
@@ -247,7 +248,7 @@ Public Class CambiumDB
 
 
     Private Sub actualizardgv()
-        Dim cnn As New OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb")
+        Dim cnn As New OleDbConnection(dbsource)
         Dim da As New OleDbDataAdapter("SELECT * FROM Cambium", cnn)
         Dim ds As New DataSet
         da.Fill(ds)
@@ -269,11 +270,14 @@ Public Class CambiumDB
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+
+
         'Carga los datos de la base de datos en el datagridview1
-        Dim cnn As New OleDbConnection("Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb")
+        Dim cnn As New OleDbConnection(dbsource)
         Dim da As New OleDbDataAdapter("SELECT * FROM Cambium", cnn)
         Dim ds As New DataSet
         da.Fill(ds)
+        'Label6.Text = "Updating Table, please wait"
         'DataGridView1.DataSource = ds.Tables(0)
         dv.Table = ds.Tables(0)
         DataGridView1.DataSource = dv
@@ -286,5 +290,8 @@ Public Class CambiumDB
         lblfecha.Text = DateTime.Now.ToString("MM/dd/yyyy")
 
         RecorrerDGVcambium()
+
+        MessageBox.Show("Table updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        'Label6.Text = ""
     End Sub
 End Class

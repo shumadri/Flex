@@ -3,6 +3,8 @@ Imports System.Data
 
 Public Class New_cambium
 
+    Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
+
     Dim Con_access As New OleDbConnection
     Dim comando As New OleDbCommand
     Dim adaptador As New OleDbDataAdapter
@@ -68,7 +70,7 @@ Public Class New_cambium
         End If
 
         Try
-            Dim conect_string1 As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
+            Dim conect_string1 As String = dbsource
             Dim conect1 As New OleDb.OleDbConnection(conect_string1)
             conect1.Open()
 
@@ -120,7 +122,7 @@ Public Class New_cambium
     Private Sub New_cambium_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Try
-            Con_access.ConnectionString = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
+            Con_access.ConnectionString = dbsource
             Con_access.Open()
             comando.Connection = Con_access
             comando.CommandType = CommandType.Text
@@ -151,7 +153,7 @@ Public Class New_cambium
         Try
 
             Dim cadenaconexion As String
-            cadenaconexion = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
+            cadenaconexion = dbsource
             Dim miconexion As OleDbConnection
             miconexion = New OleDbConnection(cadenaconexion)
 
