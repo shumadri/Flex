@@ -40,12 +40,14 @@ Public Class f
         ComboBox3.Text = DataGridView1.Rows(e.RowIndex).Cells(13).Value().ToString
         ComboBox4.Text = DataGridView1.Rows(e.RowIndex).Cells(14).Value().ToString
         TextBox8.Text = DataGridView1.Rows(e.RowIndex).Cells(15).Value().ToString
+        'camibo
 
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim date1 As Date = DateTimePicker1.Value
         Dim date2 As Date = DateTimePicker2.Value
+
         If TextBox10.Text = "" Or TextBox11.Text = "" Then
             MessageBox.Show("Please select an instrument to update", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Exit Sub
@@ -53,10 +55,14 @@ Public Class f
 
         Try
 
+
+            Dim id As Integer = Convert.ToInt32(TextBox11.Text)
+
             Dim cnn As New OleDbConnection(dbsource)
             cnn.Open()
             Dim actualizar As String
-            actualizar = "UPDATE Cambium SET [sn]='" & TextBox6.Text & "', [station]='" & TextBox1.Text.ToString & "', [description]='" & TextBox3.Text.ToString & "', [flex_cal_id]='" & TextBox4.Text.ToString & "', [asset]='" & TextBox5.Text.ToString & "', [serial]='" & TextBox7.Text.ToString & "', [status]='" & ComboBox1.Text.ToString & "', [cal_date]='" & date1 & "', [due_date]='" & date2 & "', [repair]='" & ComboBox2.Text.ToString & "', [months]='" & TextBox2.Text.ToString & "', [match]='" & ComboBox4.Text.ToString & "', [comments]='" & TextBox8.Text.ToString & "' WHERE ID='" & TextBox11.Text.ToString & "' AND instrument='" & TextBox10.Text.ToString & "'"
+            actualizar = "UPDATE Cambium SET [sn]='" & TextBox6.Text & "', [station]='" & TextBox1.Text.ToString & "', [description]='" & TextBox3.Text.ToString & "', [flex_cal_id]='" & TextBox4.Text.ToString & "', [asset]='" & TextBox5.Text.ToString & "', [serial]='" & TextBox7.Text.ToString & "', [status]='" & ComboBox1.Text.ToString & "', [cal_date]='" & date1 & "', [due_date]='" & date2 & "', [repair]='" & ComboBox2.Text.ToString & "', [months]='" & TextBox2.Text.ToString & "', [match]='" & ComboBox4.Text.ToString & "', [comments]='" & TextBox8.Text.ToString & "' WHERE ID=" & id & " AND instrument='" & TextBox10.Text.ToString & "' "
+            'actualizar = "UPDATE Cambium SET [sn]='" & TextBox6.Text & "', [station]='" & TextBox1.Text.ToString & "', [description]='" & TextBox3.Text.ToString & "', [flex_cal_id]='" & TextBox4.Text.ToString & "', [asset]='" & TextBox5.Text.ToString & "', [serial]='" & TextBox7.Text.ToString & "', [status]='" & ComboBox1.Text.ToString & "',  [repair]='" & ComboBox2.Text.ToString & "', [months]='" & TextBox2.Text.ToString & "', [match]='" & ComboBox4.Text.ToString & "', [comments]='" & TextBox8.Text.ToString & "' WHERE instrument='" & TextBox10.Text.ToString & "' AND Id= " & id & ""
             comando = New OleDbCommand(actualizar, cnn)
             comando.ExecuteNonQuery()
             MsgBox("The update was successfully.", MsgBoxStyle.Information, "Notification")
@@ -74,6 +80,17 @@ Public Class f
             MessageBox.Show(ex.Message)
         End Try
 
+
+
+        Dim cnn2 As New OleDbConnection(dbsource)
+        Dim da As New OleDbDataAdapter("SELECT * FROM Cambium", cnn2)
+        Dim ds As New DataSet
+        da.Fill(ds)
+        'DataGridView1.DataSource = ds.Tables(0)
+        dv.Table = ds.Tables(0)
+        DataGridView1.DataSource = dv
+
+        cnn2.Close()
 
 
     End Sub
