@@ -22,6 +22,7 @@ Partial Class New_Cambium_Basic
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(New_Cambium_Basic))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -124,8 +125,9 @@ Partial Class New_Cambium_Basic
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "New_Cambium_Basic"
-        Me.Text = "New_Cambium_Basic"
+        Me.Text = "New Basic Register"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
