@@ -1,7 +1,8 @@
 ﻿Imports System.Data.OleDb
 Public Class f
     Dim comando As New OleDbCommand
-    Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
+    'Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
+    Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dan25\source\repos\Flex2\Flex_1.0\Flex_DB.mdb"
 
     Private dv As New DataView
     Private Sub Update_cambium_Load(sender As Object, e As EventArgs) Handles MyBase.Load
