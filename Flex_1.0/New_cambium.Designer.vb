@@ -22,6 +22,7 @@ Partial Class New_cambium
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(New_cambium))
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -62,7 +63,7 @@ Partial Class New_cambium
         Me.TextBox6.Location = New System.Drawing.Point(145, 23)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(190, 26)
-        Me.TextBox6.TabIndex = 17
+        Me.TextBox6.TabIndex = 0
         Me.TextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
@@ -81,7 +82,7 @@ Partial Class New_cambium
         Me.TextBox1.Location = New System.Drawing.Point(452, 23)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(190, 26)
-        Me.TextBox1.TabIndex = 19
+        Me.TextBox1.TabIndex = 1
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
@@ -110,7 +111,7 @@ Partial Class New_cambium
         Me.TextBox3.Location = New System.Drawing.Point(145, 106)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(497, 26)
-        Me.TextBox3.TabIndex = 23
+        Me.TextBox3.TabIndex = 3
         Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
@@ -129,7 +130,7 @@ Partial Class New_cambium
         Me.TextBox4.Location = New System.Drawing.Point(145, 148)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(190, 26)
-        Me.TextBox4.TabIndex = 25
+        Me.TextBox4.TabIndex = 4
         Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
@@ -148,7 +149,7 @@ Partial Class New_cambium
         Me.TextBox5.Location = New System.Drawing.Point(452, 148)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(190, 26)
-        Me.TextBox5.TabIndex = 27
+        Me.TextBox5.TabIndex = 5
         Me.TextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label6
@@ -167,7 +168,7 @@ Partial Class New_cambium
         Me.TextBox7.Location = New System.Drawing.Point(145, 190)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(190, 26)
-        Me.TextBox7.TabIndex = 29
+        Me.TextBox7.TabIndex = 6
         Me.TextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label7
@@ -198,7 +199,7 @@ Partial Class New_cambium
         Me.ComboBox1.Location = New System.Drawing.Point(454, 193)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(187, 28)
-        Me.ComboBox1.TabIndex = 31
+        Me.ComboBox1.TabIndex = 7
         '
         'Label9
         '
@@ -257,7 +258,7 @@ Partial Class New_cambium
         Me.ComboBox2.Location = New System.Drawing.Point(145, 270)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(90, 28)
-        Me.ComboBox2.TabIndex = 38
+        Me.ComboBox2.TabIndex = 8
         '
         'Label12
         '
@@ -287,7 +288,7 @@ Partial Class New_cambium
         Me.ComboBox3.Location = New System.Drawing.Point(363, 270)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(85, 28)
-        Me.ComboBox3.TabIndex = 42
+        Me.ComboBox3.TabIndex = 9
         '
         'ComboBox4
         '
@@ -297,7 +298,7 @@ Partial Class New_cambium
         Me.ComboBox4.Location = New System.Drawing.Point(541, 270)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(101, 28)
-        Me.ComboBox4.TabIndex = 43
+        Me.ComboBox4.TabIndex = 10
         '
         'TextBox8
         '
@@ -305,7 +306,7 @@ Partial Class New_cambium
         Me.TextBox8.Location = New System.Drawing.Point(144, 313)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(497, 26)
-        Me.TextBox8.TabIndex = 45
+        Me.TextBox8.TabIndex = 11
         Me.TextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label14
@@ -324,7 +325,7 @@ Partial Class New_cambium
         Me.Button1.Location = New System.Drawing.Point(665, 34)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 88)
-        Me.Button1.TabIndex = 46
+        Me.Button1.TabIndex = 12
         Me.Button1.Text = "SAVE"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -334,7 +335,7 @@ Partial Class New_cambium
         Me.Button2.Location = New System.Drawing.Point(659, 288)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(115, 51)
-        Me.Button2.TabIndex = 47
+        Me.Button2.TabIndex = 13
         Me.Button2.Text = "CLOSE"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -346,10 +347,11 @@ Partial Class New_cambium
         Me.ComboBox5.Location = New System.Drawing.Point(144, 62)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(498, 28)
-        Me.ComboBox5.TabIndex = 48
+        Me.ComboBox5.TabIndex = 2
         '
         'TextBox2
         '
+        Me.TextBox2.Enabled = False
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(647, 235)
         Me.TextBox2.Name = "TextBox2"
@@ -404,8 +406,9 @@ Partial Class New_cambium
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "New_cambium"
-        Me.Text = "New_cambium"
+        Me.Text = "New Register"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

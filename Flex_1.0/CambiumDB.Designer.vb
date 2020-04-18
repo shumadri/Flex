@@ -23,6 +23,7 @@ Partial Class CambiumDB
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CambiumDB))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.CambiumBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Flex_DBDataSet = New Flex_1._0.Flex_DBDataSet()
@@ -343,8 +344,9 @@ Partial Class CambiumDB
         Me.Controls.Add(Me.txtpastdue)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "CambiumDB"
-        Me.Text = "CambiumDB"
+        Me.Text = "Cambium Dashboard"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CambiumBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Flex_DBDataSet, System.ComponentModel.ISupportInitialize).EndInit()
