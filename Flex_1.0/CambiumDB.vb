@@ -4,8 +4,7 @@ Public Class CambiumDB
     Dim comandosql As New OleDbCommand
 
     Dim db As New Menu
-    'Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
-    Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dan25\source\repos\Flex2\Flex_1.0\Flex_DB.mdb"
+    Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         ''TextBox1.Text = DateDiff(DateInterval.Day, DateTimePicker1.Value, DateTimePicker2.Value)
@@ -294,9 +293,5 @@ Public Class CambiumDB
 
         MessageBox.Show("Table updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
         'Label6.Text = ""
-    End Sub
-
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
-
     End Sub
 End Class

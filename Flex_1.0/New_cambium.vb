@@ -3,8 +3,7 @@ Imports System.Data
 
 Public Class New_cambium
 
-    'Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
-    Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dan25\source\repos\Flex2\Flex_1.0\Flex_DB.mdb"
+    Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
 
     Dim Con_access As New OleDbConnection
     Dim comando As New OleDbCommand

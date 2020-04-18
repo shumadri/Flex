@@ -1,10 +1,7 @@
 ﻿Public Class New_Cambium_Basic
-
-    'Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
-    Dim dbsource As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dan25\source\repos\Flex2\Flex_1.0\Flex_DB.mdb"
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            Dim conect_string2 As String = dbsource
+            Dim conect_string2 As String = "Provider = Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\dhernandez06\OneDrive - kochind.com\Desktop\Flex_1.0\Flex_DB.mdb"
             Dim conect2 As New OleDb.OleDbConnection(conect_string2)
             conect2.Open()
 
@@ -26,9 +23,5 @@
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Close()
-    End Sub
-
-    Private Sub New_Cambium_Basic_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class
