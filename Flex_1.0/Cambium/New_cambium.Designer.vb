@@ -55,8 +55,6 @@ Partial Class New_cambium
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'TextBox6
@@ -195,7 +193,6 @@ Partial Class New_cambium
         '
         'ComboBox1
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"NoRequired", "Offline", "PastDue", "Ontime"})
@@ -255,7 +252,6 @@ Partial Class New_cambium
         '
         'ComboBox2
         '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"YES", "NO"})
@@ -286,7 +282,6 @@ Partial Class New_cambium
         '
         'ComboBox3
         '
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Items.AddRange(New Object() {"YES", "NO"})
@@ -297,7 +292,6 @@ Partial Class New_cambium
         '
         'ComboBox4
         '
-        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox4.FormattingEnabled = True
         Me.ComboBox4.Items.AddRange(New Object() {"YES", "NO"})
@@ -328,7 +322,7 @@ Partial Class New_cambium
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(665, 12)
+        Me.Button1.Location = New System.Drawing.Point(665, 34)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 88)
         Me.Button1.TabIndex = 12
@@ -347,7 +341,6 @@ Partial Class New_cambium
         '
         'ComboBox5
         '
-        Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox5.FormattingEnabled = True
         Me.ComboBox5.Items.AddRange(New Object() {"Norequired", "Offline", "PastDue"})
@@ -362,7 +355,7 @@ Partial Class New_cambium
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(647, 235)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(147, 24)
+        Me.TextBox2.Size = New System.Drawing.Size(127, 24)
         Me.TextBox2.TabIndex = 49
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -376,34 +369,11 @@ Partial Class New_cambium
         Me.Label15.TabIndex = 50
         Me.Label15.Text = "Cal. Months"
         '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(685, 121)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(65, 20)
-        Me.Label16.TabIndex = 52
-        Me.Label16.Text = "Project"
-        '
-        'ComboBox6
-        '
-        Me.ComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox6.FormattingEnabled = True
-        Me.ComboBox6.Items.AddRange(New Object() {"Cambium", "Novariant", "Enphase", "F5"})
-        Me.ComboBox6.Location = New System.Drawing.Point(648, 146)
-        Me.ComboBox6.Name = "ComboBox6"
-        Me.ComboBox6.Size = New System.Drawing.Size(146, 28)
-        Me.ComboBox6.TabIndex = 53
-        '
         'New_cambium
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(806, 346)
-        Me.Controls.Add(Me.ComboBox6)
-        Me.Controls.Add(Me.Label16)
+        Me.ClientSize = New System.Drawing.Size(781, 346)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.ComboBox5)
@@ -436,9 +406,7 @@ Partial Class New_cambium
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Label1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximizeBox = False
         Me.Name = "New_cambium"
         Me.Text = "New Register"
         Me.ResumeLayout(False)
@@ -478,6 +446,4 @@ Partial Class New_cambium
     Friend WithEvents ComboBox5 As ComboBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents ComboBox6 As ComboBox
 End Class

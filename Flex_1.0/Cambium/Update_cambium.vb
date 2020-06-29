@@ -40,7 +40,6 @@ Public Class f
         ComboBox3.Text = DataGridView1.Rows(e.RowIndex).Cells(13).Value().ToString
         ComboBox4.Text = DataGridView1.Rows(e.RowIndex).Cells(14).Value().ToString
         TextBox8.Text = DataGridView1.Rows(e.RowIndex).Cells(15).Value().ToString
-        TextBox12.Text = DataGridView1.Rows(e.RowIndex).Cells(17).Value().ToString
         'camibo
 
     End Sub

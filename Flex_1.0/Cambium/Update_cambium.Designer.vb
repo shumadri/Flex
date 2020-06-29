@@ -61,8 +61,6 @@ Partial Class f
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -88,7 +86,7 @@ Partial Class f
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(829, 184)
+        Me.Button2.Location = New System.Drawing.Point(860, 184)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(138, 42)
         Me.Button2.TabIndex = 79
@@ -98,7 +96,7 @@ Partial Class f
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(645, 184)
+        Me.Button1.Location = New System.Drawing.Point(664, 184)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(178, 42)
         Me.Button1.TabIndex = 78
@@ -436,32 +434,11 @@ Partial Class f
         Me.TextBox11.TabIndex = 88
         Me.TextBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(973, 169)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(70, 20)
-        Me.Label19.TabIndex = 91
-        Me.Label19.Text = "Project:"
-        '
-        'TextBox12
-        '
-        Me.TextBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox12.Location = New System.Drawing.Point(1066, 165)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(183, 24)
-        Me.TextBox12.TabIndex = 90
-        Me.TextBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'f
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1296, 641)
-        Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.TextBox12)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.TextBox11)
         Me.Controls.Add(Me.Label17)
@@ -547,6 +524,4 @@ Partial Class f
     Friend WithEvents Label17 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents Label19 As Label
-    Friend WithEvents TextBox12 As TextBox
 End Class

@@ -69,11 +69,6 @@ Public Class New_cambium
             Exit Sub
         End If
 
-        If ComboBox6.Text = "" Then
-            MessageBox.Show("Please,Select a Project", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Exit Sub
-        End If
-
         Try
             Dim conect_string1 As String = dbsource
             Dim conect1 As New OleDb.OleDbConnection(conect_string1)
@@ -82,7 +77,7 @@ Public Class New_cambium
             Dim date1 As Date = DateTimePicker1.Value
             Dim date2 As Date = DateTimePicker2.Value
 
-            Dim query1 As String = "INSERT INTO Cambium ([sn],[station],[instrument],[description],[flex_cal_id],[asset],[serial],[status],[cal_date],[due_date],[repair],[months],[website],[match],[comments],[fecha_carga],[proyecto]) VALUES (@sn1,@station1,@instrument1,@description1,@flex_cal_id1,@asset1,@serial1,@status1,@cal_date1,@due_date1,@repair1,@months1,@website1,@match1,@comments1,@fecha_carga1,@proyecto1)"
+            Dim query1 As String = "INSERT INTO Cambium ([sn],[station],[instrument],[description],[flex_cal_id],[asset],[serial],[status],[cal_date],[due_date],[repair],[months],[website],[match],[comments],[fecha_carga]) VALUES (@sn1,@station1,@instrument1,@description1,@flex_cal_id1,@asset1,@serial1,@status1,@cal_date1,@due_date1,@repair1,@months1,@website1,@match1,@comments1,@fecha_carga1)"
             Dim Comando1 As New OleDb.OleDbCommand(query1, conect1)
 
             Comando1.Parameters.AddWithValue("@sn1", TextBox6.Text)
@@ -101,7 +96,6 @@ Public Class New_cambium
             Comando1.Parameters.AddWithValue("@match1", ComboBox4.Text)
             Comando1.Parameters.AddWithValue("@comments1", ComboBox4.Text)
             Comando1.Parameters.AddWithValue("@fecha_carga1", DateTime.Now.ToString("dd/MM/yyyy") & " " & DateTime.Now.ToLongTimeString)
-            Comando1.Parameters.AddWithValue("@proyecto1", ComboBox6.Text)
             Comando1.ExecuteNonQuery()
             conect1.Close()
             MessageBox.Show("Data was saved in the DataBase successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -112,13 +106,12 @@ Public Class New_cambium
             TextBox4.Text = ""
             TextBox5.Text = ""
             TextBox7.Text = ""
-            ComboBox1.Text = Nothing
-            ComboBox2.Text = Nothing
-            ComboBox3.Text = Nothing
-            ComboBox4.Text = Nothing
+            ComboBox1.Text = ""
+            ComboBox2.Text = ""
+            ComboBox3.Text = ""
+            ComboBox4.Text = ""
             TextBox8.Text = ""
             TextBox2.Text = ""
-            ComboBox6.Text = Nothing
         Catch ex As Exception
             MessageBox.Show(ex.Message)
 
@@ -221,9 +214,5 @@ Public Class New_cambium
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Me.Close()
-    End Sub
-
-    Private Sub Label16_Click(sender As Object, e As EventArgs) Handles Label16.Click
-
     End Sub
 End Class

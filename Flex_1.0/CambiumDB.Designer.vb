@@ -344,7 +344,9 @@ Partial Class CambiumDB
         Me.Controls.Add(Me.txtpastdue)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "CambiumDB"
         Me.Text = "Cambium Dashboard"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

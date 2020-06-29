@@ -122,6 +122,12 @@
     <Compile Include="New_cambium.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="NovariantDB.Designer.vb">
+      <DependentUpon>NovariantDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NovariantDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Update_cambium.Designer.vb">
       <DependentUpon>Update_cambium.vb</DependentUpon>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="New_cambium.resx">
       <DependentUpon>New_cambium.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NovariantDB.resx">
+      <DependentUpon>NovariantDB.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update_cambium.resx">
       <DependentUpon>Update_cambium.vb</DependentUpon>

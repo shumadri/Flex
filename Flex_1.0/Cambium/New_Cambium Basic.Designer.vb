@@ -94,7 +94,6 @@ Partial Class New_Cambium_Basic
         'ComboBox1
         '
         Me.ComboBox1.BackColor = System.Drawing.SystemColors.Window
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Norequired", "24", "12"})
@@ -126,9 +125,7 @@ Partial Class New_Cambium_Basic
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximizeBox = False
         Me.Name = "New_Cambium_Basic"
         Me.Text = "New Basic Register"
         Me.ResumeLayout(False)
